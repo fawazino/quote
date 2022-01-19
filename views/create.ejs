@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs') %> 
+<body>
+    <div class="container " style="background-color: bisque; height: 60px;">
+        <h3 style="text-align: center;">Create Your Quote</h3>
+    </div>
+    <br>
+    
+ 
+    <form action="/quotes" method="POST" class="form form-control">
+        
+        <input type="text" name="author" class="author formEntry" placeholder="Name"><br>
+        <input type="text" name="color" class="author formEntry" placeholder="color"><br>
+      
+        <textarea name="quote" class="quote formEntry" placeholder="Quote"></textarea>
+        <input type="submit" value="Submit" class="btn btn-success submit formEntry">
+    </form>
+</body>
+</html>

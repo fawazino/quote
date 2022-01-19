@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head.ejs') %> 
+<body>
+  <div class="container">
+      <h3> Quotes Creator. </h3>
+    <a href="/create" id="cr"><h5>Create your quote</h5> </a>
+    </div>  
+     <br> <br>
+    <!-- <h4>Lets get to know you</h4>-->
+     
+  <div class="container" >
+    <% quote.forEach (quote=> { %>
+        <div style="background-color: <%- quote.color %> ;">
+    <h4>Quote: <%= quote.quote  %> </h4>
+    <p style="text-decoration: underline;">Author: <%= quote.author %></p> 
+   </div><br>
+<%   }) %>
+  </div>
+  
+</body>
+</html>
