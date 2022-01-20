@@ -3,6 +3,7 @@ const dotenv = require('dotenv')
 const mongoose = require('mongoose')
 var bodyParser = require('body-parser')
 const Quote = require('./models/mySchema')
+const port = process.env.PORT || 3000
 
 const app = express()
 
@@ -12,8 +13,8 @@ app.use(express.urlencoded({extended: true}))
 dotenv.config()
 mongoose.connect(process.env.DB_URI, {useNewUrlParser:true, useUnifiedTopology:true})
 .then(()=>{
-    app.listen(process.env.PORT, ()=>{
-        console.log(`server running on port`, process.env.PORT)
+    app.listen(port, ()=>{
+        console.log(`server running on port ${port}`)
     })
 })
 .catch(err => console.log(err))
